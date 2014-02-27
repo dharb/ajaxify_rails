@@ -184,7 +184,7 @@ update_url = (options, pop_state = false) ->
 
 
 on_ajaxify_success = (data, status, jqXHR, pop_state, options) ->
-  $("##{content_container}").fadeOut('fast').html(data).fadeIn('fast')
+  $("##{content_container}").css('display','none').html(data).fadeIn('slow')
 
   if $('#ajaxify_content').length > 0  # it can happen that #ajaxify_content is not present at this point, on ajaxify redirects for example
     title = $('#ajaxify_content').data('page-title')
