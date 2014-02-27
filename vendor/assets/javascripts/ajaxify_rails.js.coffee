@@ -4,7 +4,7 @@ base_paths = null
 flash_types = ['notice']
 dont_correct_url = false
 push_state_enabled = true
-loader_element = "<div class='ajaxify_loader'></div>"
+loader_element = "<div class='ajaxify_loader'><img src='/assets/vinyl-small.png' id='loading' alt='loading..'></div>"
 
 ignore_hash_change = null
 load_page_from_hash = null
@@ -136,7 +136,7 @@ load = (options, pop_state = false) ->
       type: type
       cache: true
       beforeSend: (xhr) ->
-        $("##{content_container}").html( loader_element )
+        $("##{content_container}").append( loader_element )
         options.scroll_to_top = scroll_to_top unless 'scroll_to_top' of options
         scroll_page_to_top() if options.scroll_to_top
 
