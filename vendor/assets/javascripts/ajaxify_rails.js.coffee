@@ -4,7 +4,7 @@ base_paths = null
 flash_types = ['notice']
 dont_correct_url = false
 push_state_enabled = true
-loader_element = "<div class='ajaxify_loader'><img src='/assets/vinyl-small.png' id='loading' alt='loading..'></div>"
+loader_element = "<div class='ajaxify_loader sb-slide'><img src='/assets/vinyl-small.png' id='loading' alt='loading..'></div>"
 
 ignore_hash_change = null
 load_page_from_hash = null
